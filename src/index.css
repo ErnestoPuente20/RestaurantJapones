@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --brand-red: #E71C20;
+    --brand-black: #1C1917;
+    --brand-white: #F5F3EE;
+    
+    /* Versión con transparencia para el efecto glass */
+    --glass-bg: rgba(245, 243, 238, 0.75); 
+  }
+
+  body {
+    background-color: var(--brand-white);
+    color: var(--brand-black);
+  }
+}
+
+@layer components {
+  .text-black-site {
+    color: var(--brand-black);
+  }
+
+  .navbar-glass {
+    background: var(--glass-bg);
+    /* El blur es clave para que el texto resalte sobre cualquier fondo */
+    backdrop-filter: blur(14px) saturate(160%);
+    -webkit-backdrop-filter: blur(14px) saturate(160%);
+    border: 1px solid rgba(28, 25, 23, 0.1);
+    border-radius: 9999px; 
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s ease;
+  }
+
+  .nav-item {
+    @apply uppercase text-sm transition-colors duration-300;
+  }
+
+  .nav-item:hover {
+    color: var(--brand-red);
+  }
+
+  /* Detalle decorativo: punto rojo al pasar el mouse */
+  /* .nav-item::after {
+    content: '●';
+    display: block;
+    font-size: 8px;
+    text-align: center;
+    opacity: 0;
+    color: var(--brand-red);
+    transition: opacity 0.3s ease;
+  } */
+
+  /* .nav-item:hover::after {
+    opacity: 1;
+  } */
+}
