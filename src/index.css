@@ -1,12 +1,18 @@
 @import "tailwindcss";
 
+@theme {
+  /* Mapeamos tus variables a nombres de clases de Tailwind */
+  --color-brand-red: var(--brand-red);
+  --color-brand-black: var(--brand-black);
+  --color-brand-white: var(--brand-white);
+  --color-glass-bg: var(--glass-bg);
+}
+
 @layer base {
   :root {
     --brand-red: #E71C20;
     --brand-black: #1C1917;
     --brand-white: #F5F3EE;
-    
-    /* Versión con transparencia para el efecto glass */
     --glass-bg: rgba(245, 243, 238, 0.75); 
   }
 
