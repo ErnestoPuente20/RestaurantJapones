@@ -1,17 +1,31 @@
-import React from 'react'
 import logo from '../../assets/logo-prueba.png'
 
 export default function Navbar() {
   return (
-    <nav className="absolute top-0 left-0 right-0 z-50 flex justify-center p-6">
-      <div className="navbar-glass flex justify-between h-16 items-center w-full max-w-6xl px-10">
-        <a href="/">
-          <img src={logo} alt="Logo" className="h-12 w-auto" />
+    <nav className="absolute top-0 left-0 right-0 z-50 flex justify-center p-8">
+      {/* Contenedor principal sin fondo pesado */}
+      <div className="flex justify-between items-center w-full max-w-7xl px-4">
+        
+        {/* LOGO con un ligero efecto de elevación */}
+        <a href="/" className="transition-transform duration-300 hover:scale-105">
+          <img src={logo} alt="Logo" className="h-14 w-auto" />
         </a>
-        <ul className="flex gap-10 items-center font-bold tracking-wide text-black-site">
-          <li className="nav-item cursor-pointer">Menú</li>
-          <li className="nav-item cursor-pointer">Contacto</li>
-        </ul>
+
+        {/* MENU con tipografía Quicksand para modernidad */}
+        <div className="flex items-center gap-12">
+          <ul className="flex gap-10 items-center font-quicksand font-bold tracking-[0.2em] text-sm uppercase text-brand-black">
+            <li className="relative group cursor-pointer">
+              <span className="hover:text-brand-red transition-colors duration-300">Menú</span>
+              {/* Línea animada (estilo pincelada sutil) */}
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-brand-red transition-all duration-300 group-hover:w-full"></span>
+            </li>
+            <li className="relative group cursor-pointer">
+              <span className="hover:text-brand-red transition-colors duration-300">Contacto</span>
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-brand-red transition-all duration-300 group-hover:w-full"></span>
+            </li>
+          </ul>
+        </div>
+
       </div>
     </nav>
   )
