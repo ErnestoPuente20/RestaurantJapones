@@ -1,6 +1,6 @@
 import logo from '../../assets/logo-prueba.png';
 import { MessageCircle, MapPin, Phone, Clock, Code } from 'lucide-react';
-import { FaInstagram, FaFacebookF, FaWhatsapp } from 'react-icons/fa';
+import { FaTiktok ,FaInstagram, FaFacebookF, FaWhatsapp } from 'react-icons/fa';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -57,6 +57,9 @@ export default function Footer() {
               
               {/* Redes sociales - Iconos un poco más grandes también */}
               <div className='flex gap-8 pt-6'>
+                <a href="#" className='text-brand-white hover:text-brand-red transition-all hover:-translate-y-1'>
+                  <FaTiktok size={28}/>
+                </a>
                 <a href="#" className='text-brand-white hover:text-brand-red transition-all hover:-translate-y-1'>
                   <FaInstagram size={28}/>
                 </a>

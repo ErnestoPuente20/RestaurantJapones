@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Noto+Serif+JP:wght@200..900&family=Quicksand:wght@300..700&display=swap');
 
 @import "tailwindcss";
+@import "@splidejs/react-splide/css";
 
 @theme {
 
@@ -54,18 +55,36 @@
     color: var(--brand-red);
   }
 
-  /* Detalle decorativo: punto rojo al pasar el mouse */
-  /* .nav-item::after {
-    content: '●';
-    display: block;
-    font-size: 8px;
-    text-align: center;
-    opacity: 0;
-    color: var(--brand-red);
-    transition: opacity 0.3s ease;
-  } */
+  /* Personalizacion de splide */
+  .splide .splide__pagination {
+    bottom: -1.5rem !important;
+    gap: 10px !important;
+    position: relative; /* A veces esto ayuda a que el bottom funcione mejor */
+  }
 
-  /* .nav-item:hover::after {
+  .splide .splide__pagination__page {
+    background: #ccc !important;
+    opacity: 0.5 !important;
+    width: 10px !important; /* Prueba a subirlos un poco para notar el cambio */
+    height: 10px !important;
+    transition: all 0.3s ease !important;
+  }
+
+  .splide .splide__pagination__page.is-active {
+    background: var(--brand-red) !important;
+    opacity: 1 !important;
+    transform: scale(1.4) !important;
+    border-radius: 4px !important;
+  }
+
+  /* Si decides dejar las flechas en algún momento, aquí puedes darles estilo */
+  .splide__arrow {
+    background: var(--brand-white) !important;
+    border: 1px solid rgba(28, 25, 23, 0.1);
     opacity: 1;
-  } */
+  }
+
+  .splide__arrow svg {
+    fill: var(--brand-red) !important;
+  }
 }
