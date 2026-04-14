@@ -3,6 +3,10 @@
 @import "tailwindcss";
 @import "@splidejs/react-splide/css";
 
+html {
+  scroll-behavior: smooth;
+}
+
 @theme {
 
   --font-kaushan: "Kaushan Script", cursive;

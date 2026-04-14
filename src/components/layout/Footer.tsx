@@ -6,7 +6,7 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="w-full bg-transparent px-4">
+    <footer id='contacto' className="w-full bg-transparent px-4">
       {/* Contenedor fondo - Ajustado a max-w-[1440px] para que respire */}
       <div className='max-w-360 mx-auto bg-brand-black text-brand-white rounded-t-[3rem] shadow-2xl overflow-hidden'>
         

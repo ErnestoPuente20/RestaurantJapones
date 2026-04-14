@@ -15,13 +15,16 @@ export default function Navbar() {
         <div className="flex items-center gap-12">
           <ul className="flex gap-10 items-center font-quicksand font-bold tracking-[0.2em] text-sm uppercase text-brand-black">
             <li className="relative group cursor-pointer">
-              <span className="hover:text-brand-red transition-colors duration-300">Menú</span>
-              {/* Línea animada (estilo pincelada sutil) */}
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-brand-red transition-all duration-300 group-hover:w-full"></span>
+              <a href="#menu-section" className="hover:text-brand-red transition-colors duration-300 block py-1">
+                Menú
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-brand-red transition-all duration-300 group-hover:w-full"></span>
+              </a>
             </li>
             <li className="relative group cursor-pointer">
-              <span className="hover:text-brand-red transition-colors duration-300">Contacto</span>
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-brand-red transition-all duration-300 group-hover:w-full"></span>
+              <a href="#contacto" className="hover:text-brand-red transition-colors duration-300 block py-1">
+                Contacto
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-brand-red transition-all duration-300 group-hover:w-full"></span>
+              </a>
             </li>
           </ul>
         </div>
