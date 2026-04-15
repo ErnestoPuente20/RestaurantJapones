@@ -27,7 +27,7 @@ export default function Promotion() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className='flex flex-col md:flex-row bg-brand-black rounded-[2rem] md:rounded-[3rem] overflow-hidden shadow-[0_30px_60px_rgba(0,0,0,0.15)] border border-white/5'
+          className='flex flex-col md:flex-row bg-brand-black rounded-4xl md:rounded-[3rem] overflow-hidden shadow-[0_30px_60px_rgba(0,0,0,0.15)] border border-white/5'
         >
           {/* Contenedor de imagen - Ajuste de altura en móvil */}
           <div className='w-full md:w-2/5 relative h-64 md:h-auto overflow-hidden'>

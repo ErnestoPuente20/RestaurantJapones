@@ -5,16 +5,20 @@ import Hero from "./components/sections/Hero"
 import Menu from "./components/sections/Menu"
 import Promotion from "./components/sections/Promotion"
 
+import { HelmetProvider } from "react-helmet-async"
+
 function App() {
 
   return (
     <>
-      <Navbar/>
-      <Hero/>
-      <Promotion/>
-      <Menu/>
-      <AboutUs/>
-      <Footer/>
+      <HelmetProvider>
+        <Navbar/>
+        <Hero/>
+        <Promotion/>
+        <Menu/>
+        <AboutUs/>
+        <Footer/>
+      </HelmetProvider>
     </>
   )
 }

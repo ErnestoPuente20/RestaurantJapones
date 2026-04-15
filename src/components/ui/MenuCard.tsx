@@ -1,6 +1,5 @@
 import { PlusCircle } from "lucide-react";
 import type { MenuItem } from "../../types";
-import { motion } from "framer-motion";
 
 interface MenuCardProps {
   item: MenuItem;
@@ -11,7 +10,7 @@ export default function MenuCard({ item, onOpenModal }: MenuCardProps) {
   return (
     <div className="group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 border border-gray-100 flex flex-col h-full">
       {/* Imagen con zoom sutil */}
-      <div className="w-full aspect-[4/5] overflow-hidden">
+      <div className="w-full aspect-4/5 overflow-hidden">
         <img
           src={item.image}
           alt={item.name}
@@ -20,7 +19,7 @@ export default function MenuCard({ item, onOpenModal }: MenuCardProps) {
       </div>
 
       {/* Info */}
-      <div className="p-5 flex flex-col flex-grow gap-2">
+      <div className="p-5 flex flex-col grow gap-2">
         <h3 className="text-brand-black font-kaushan text-xl md:text-2xl group-hover:text-brand-red transition-colors">
           {item.name}
         </h3>

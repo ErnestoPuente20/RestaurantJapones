@@ -1,5 +1,5 @@
 import logo from '../../assets/logo-prueba.png';
-import { MapPin, Phone, Clock, Code } from 'lucide-react';
+import { MapPin, Phone, Clock } from 'lucide-react';
 import { FaTiktok ,FaInstagram, FaFacebookF, FaWhatsapp } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 
@@ -9,7 +9,7 @@ export default function Footer() {
   return (
     <footer id='contacto' className="w-full bg-transparent px-2 md:px-4">
       {/* Contenedor fondo - Ajustado para que en móvil sea casi full width */}
-      <div className='max-w-[1440px] mx-auto bg-brand-black text-brand-white rounded-t-[2.5rem] md:rounded-t-[3rem] shadow-2xl overflow-hidden'>
+      <div className='max-w-360 mx-auto bg-brand-black text-brand-white rounded-t-[2.5rem] md:rounded-t-[3rem] shadow-2xl overflow-hidden'>
         
         {/* Contenedor del contenido */}
         <div className='max-w-7xl mx-auto px-6 md:px-8 pt-16 md:pt-20 pb-10'>
@@ -77,8 +77,8 @@ export default function Footer() {
             </div>
 
             {/* Columna 2 - Mapa (Ajustado para no ser tan alto en móvil) */}
-            <div className="relative group h-[300px] md:h-full min-h-[300px] lg:min-h-[450px]">
-              <div className="w-full h-full rounded-[2rem] overflow-hidden border border-white/10 grayscale hover:grayscale-0 transition-all duration-1000">
+            <div className="relative group h-75 md:h-full min-h-75 lg:min-h-112.5">
+              <div className="w-full h-full rounded-4xl overflow-hidden border border-white/10 grayscale hover:grayscale-0 transition-all duration-1000">
                 <iframe
                   title="Ubicación El Castillo Vagabundo"
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3825.435748281134!2d-68.1311111!3d-16.505!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTbCsDMwJzE4LjAiUyA2OMKwMDcnNTIuMCJX!5e0!3m2!1ses!2sbo!4v1650000000000!5m2!1ses!2sbo"
@@ -95,12 +95,6 @@ export default function Footer() {
           {/* Linea final */}
           <div className="mt-16 md:mt-20 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-6 text-[10px] md:text-[11px] uppercase tracking-[0.2em] text-white/30 font-medium text-center">
             <p>© {currentYear} Japanese Cuisine. Todos los derechos reservados.</p>
-            {/* <div className='flex items-center gap-3 group'>
-              <Code size={14} className='group-hover:text-brand-red transition-colors'/>
-              <p>
-                DISEÑADO POR <span className="text-white/50 group-hover:text-white transition-colors cursor-pointer">ERNESTO PUENTE</span>
-              </p>
-            </div> */}
           </div>
         </div>
       </div>
