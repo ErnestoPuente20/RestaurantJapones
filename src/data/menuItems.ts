@@ -44,7 +44,7 @@ export const menuItems: MenuItem[] = [
       image: "/productos/gyosas.png"
     },
     {
-      id: 3,
+      id: 5,
       categoryId: 1,
       name: "Banderillas",
       variants: [
@@ -53,22 +53,6 @@ export const menuItems: MenuItem[] = [
           { id: 3, name: "Banderilla de salchicha", price: 65 },
       ],
       image: "/productos/onigiris.png"
-    },
-    {
-      id: 4,
-      categoryId: 2,
-      name: "Sosuke",
-      description: "Maracuya, flor de jamaica y pimienta rosada",
-      image: "/productos/brebajes.png",
-      price: 25
-    },
-    {
-      id: 5,
-      categoryId: 2,
-      name: "Sosuke",
-      description: "Maracuya, flor de jamaica y pimienta rosada",
-      image: "/productos/brebajes.png",
-      price: 25
     },
     {
       id: 6,
@@ -80,6 +64,22 @@ export const menuItems: MenuItem[] = [
     },
     {
       id: 7,
+      categoryId: 2,
+      name: "Sosuke",
+      description: "Maracuya, flor de jamaica y pimienta rosada",
+      image: "/productos/brebajes.png",
+      price: 25
+    },
+    {
+      id: 8,
+      categoryId: 2,
+      name: "Sosuke",
+      description: "Maracuya, flor de jamaica y pimienta rosada",
+      image: "/productos/brebajes.png",
+      price: 25
+    },
+    {
+      id: 9,
       categoryId: 2,
       name: "Sosuke",
       description: "Maracuya, flor de jamaica y pimienta rosada",

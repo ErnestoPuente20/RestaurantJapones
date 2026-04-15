@@ -1,5 +1,6 @@
 import { useState } from "react";
-import {Splide, SplideSlide} from '@splidejs/react-splide';
+import { Splide, SplideSlide } from '@splidejs/react-splide';
+import { motion, AnimatePresence } from "framer-motion";
 
 import CategoryFilter from "../ui/CategoryFilter";
 import MenuCard from "../ui/MenuCard";
@@ -14,51 +15,70 @@ export default function Menu() {
   const filtered = menuItems.filter(item => item.categoryId === selectedCategory);
 
   return (
-    <section id="menu-section" className="w-full py-24">
-      <div className="max-w-7xl mx-auto">
-        <h2 className="font-kaushan text-5xl text-brand-red mb-15 text-center">
+    <section id="menu-section" className="w-full py-20 md:py-32 bg-brand-white">
+      <div className="max-w-7xl mx-auto px-4">
+        
+        <motion.h2 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="font-kaushan text-5xl md:text-6xl text-brand-red mb-12 md:mb-20 text-center"
+        >
           Nuestro Menú
-        </h2>
+        </motion.h2>
 
         <CategoryFilter
           selectedId={selectedCategory}
           onSelect={setSelectedCategory}
         />
 
-        {/* Grid de cards */}
-        <div className="mt-10">
-          <Splide
-            key={selectedCategory}
-            options={{
-              type: 'slide',
-              drag: 'free',
-              snap: true,
-              perPage: 4,
-              gap: '1.5rem',
-              arrows: true,
-              pagination: true,
-              breakpoints: {
-                1024: {perPage: 3},
-                768: {perPage: 2},
-                640: {perPage: 1.5, gap: '1rem', paddiing: {right: '2rem'}}
-              }
-            }}
-          >
-            {filtered.map(item => (
-              <SplideSlide key={item.id}>
-                <MenuCard item={item} onOpenModal={setModalItem}/>
-              </SplideSlide>
-            ))}
-          </Splide>
+        {/* Contenedor del Slider con animación de cambio */}
+        <div className="mt-12 md:mt-16">
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={selectedCategory}
+              initial={{ opacity: 0, x: 10 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: -10 }}
+              transition={{ duration: 0.3 }}
+            >
+              <Splide
+                options={{
+                  type: 'slide',
+                  arrows: true,
+                  pagination: false,
+                  perPage: 4,
+                  gap: '2rem',
+                  breakpoints: {
+                    1280: { perPage: 3 },
+                    1024: { perPage: 2, gap: '1.5rem' },
+                    640: { 
+                      perPage: 1, 
+                      padding: { right: '4rem' }, // Deja ver un poco de la siguiente card
+                      gap: '1rem',
+                      arrows: false 
+                    }
+                  }
+                }}
+              >
+                {filtered.map(item => (
+                  <SplideSlide key={item.id} className="pb-12"> {/* Padding para la sombra */}
+                    <MenuCard item={item} onOpenModal={setModalItem}/>
+                  </SplideSlide>
+                ))}
+              </Splide>
+            </motion.div>
+          </AnimatePresence>
         </div>
 
-        {/* Modal — lo hacemos después */}
-        {modalItem && (
-          <VariantsModal
-            item={modalItem}
-            onClose={() => setModalItem(null)}
-          />
-        )}
+        <AnimatePresence>
+          {modalItem && (
+            <VariantsModal
+              item={modalItem}
+              onClose={() => setModalItem(null)}
+            />
+          )}
+        </AnimatePresence>
       </div>
     </section>
   );
