@@ -165,7 +165,7 @@ export default function Hero() {
               style={{ rotate }}
               className="w-full max-w-xs sm:max-w-sm md:max-w-lg drop-shadow-[0_30px_50px_rgba(0,0,0,0.35)] relative z-20"
             >
-              <img src="/RamenHero.png" alt="Ramen Signature" className="w-full h-auto" />
+              <img src="/RamenHero.webp" alt="Ramen Signature" className="w-full h-auto" />
             </motion.div>
           </motion.div>
 

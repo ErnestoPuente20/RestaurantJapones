@@ -32,7 +32,7 @@ export default function Promotion() {
           {/* Contenedor de imagen - Ajuste de altura en móvil */}
           <div className='w-full md:w-2/5 relative h-64 md:h-auto overflow-hidden'>
             <img 
-              src="/promocion.png" 
+              src="/promocion.webp" 
               alt="Combo Miyazaki"
               className='w-full h-full object-cover hover:scale-110 transition-transform duration-1000'
             />
