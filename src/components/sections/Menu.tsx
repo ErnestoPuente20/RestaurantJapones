@@ -16,7 +16,7 @@ export default function Menu() {
 
   return (
     <section id="menu-section" className="w-full py-20 md:py-32 bg-brand-white">
-      <div className="max-w-7xl mx-auto px-4">
+      <div className="lg:max-w-6xl 2xl:max-w-7xl mx-auto px-4">
         
         <motion.h2 
           initial={{ opacity: 0, y: 20 }}

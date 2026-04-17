@@ -42,7 +42,7 @@ export default function Hero() {
         <meta property="og:image" content="https://tu-dominio.com/preview-ramen.jpg" /> 
       </Helmet>
 
-      <section className="relative flex items-center justify-center w-full min-h-screen bg-brand-white overflow-hidden px-6 md:px-12 py-24 md:py-0">
+      <section className="relative flex items-center justify-center w-full min-h-162.5 md:min-h-screen bg-brand-white overflow-hidden px-6 md:px-12 py-24 md:py-0">
       
         {/* Fondo decorativo */}
         <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none">
@@ -69,7 +69,7 @@ export default function Hero() {
           ))}
         </div>
 
-        <div className="max-w-7xl w-full grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center z-10">
+        <div className="lg:max-w-6xl 2xl:max-w-7xl w-full grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center z-10">
 
           {/* ── LADO IZQUIERDO ── */}
           <div className="flex flex-col space-y-6 md:space-y-10 text-center md:text-left items-center md:items-start">
@@ -90,7 +90,7 @@ export default function Hero() {
               variants={fadeUp(0.25)}
               initial="hidden"
               animate="visible"
-              className="text-5xl sm:text-6xl lg:text-8xl font-kaushan leading-[1.1] flex flex-col items-center md:items-start"
+              className="text-5xl md:text-5xl lg:text-6xl  font-kaushan leading-[1.1] flex flex-col items-center md:items-start"
             >
               <span className="text-brand-black">Un festín que</span>
               <div className="flex items-baseline gap-x-3 flex-wrap justify-center md:justify-start">
@@ -162,8 +162,11 @@ export default function Hero() {
             </div>
 
             <motion.div
-              style={{ rotate }}
-              className="w-full max-w-xs sm:max-w-sm md:max-w-lg drop-shadow-[0_30px_50px_rgba(0,0,0,0.35)] relative z-20"
+              style={{ 
+              rotate,
+              maxWidth: window.innerHeight < 700 && window.innerWidth > 768 ? '350px' : undefined 
+            }}
+            className="w-full sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl drop-shadow-[0_30px_50px_rgba(0,0,0,0.35)] relative z-20"
             >
               <img src="/RamenHero.webp" alt="Ramen Signature" className="w-full h-auto" />
             </motion.div>

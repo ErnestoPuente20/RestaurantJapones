@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 export default function AboutUs() {
   return (
     <section className="relative w-full py-20 md:py-32 bg-[#F5F3EE] overflow-hidden px-6">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+      <div className="lg:max-w-6xl 2xl:max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
         
         {/* LADO IZQUIERDO: TEXTO NARRATIVO */}
         <motion.div 
@@ -35,7 +35,7 @@ export default function AboutUs() {
         </motion.div>
 
         {/* LADO DERECHO: COMPOSICIÓN DE FOTOS (STAKED PHOTOS) */}
-        <div className="relative h-[450px] md:h-[600px] w-full flex items-center justify-center mt-16 lg:mt-0">
+        <div className="relative h-112.5 md:h-150 w-full flex items-center justify-center mt-16 lg:mt-0">
           
           {/* FOTO 1: Fondo Izquierda */}
           <motion.div 

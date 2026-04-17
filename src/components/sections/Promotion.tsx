@@ -4,7 +4,7 @@ import { Tag, Clock, Sparkles } from 'lucide-react'
 export default function Promotion() {
   return (
     <section className="relative w-full py-16 md:py-24 bg-brand-white/50 px-4">
-      <div className="max-w-7xl mx-auto">
+      <div className="lg:max-w-6xl 2xl:max-w-7xl mx-auto">
         
         {/* Cabecera de la sección - Animada */}
         <motion.div 
